@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Black Mart ☠️</title>
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Polyfills for older browsers (Samsung Internet, old Android/iOS)
+      try{
+        if(!window.AudioContext)window.AudioContext=window.webkitAudioContext;
+        if(!Element.prototype.closest){Element.prototype.closest=function(s){var el=this;do{if(el.matches&&el.matches(s))return el;el=el.parentElement||el.parentNode}while(el!==null&&el.nodeType===1);return null}}
+        if(!Element.prototype.matches){Element.prototype.matches=Element.prototype.msMatchesSelector||Element.prototype.webkitMatchesSelector||function(s){var m=(this.document||this.ownerDocument).querySelectorAll(s),i=m.length;while(--i>=0&&m.item(i)!==this);return i>-1}}
+        if(!String.prototype.startsWith){String.prototype.startsWith=function(s,p){p=p||0;return this.indexOf(s,p)===p}}
+        if(!String.prototype.includes){String.prototype.includes=function(s,p){return this.indexOf(s,p||0)!==-1}}
+        if(!String.prototype.repeat){String.prototype.repeat=function(n){return new Array(n+1).join(this)}}
+        if(!String.prototype.padStart){String.prototype.padStart=function(n,c){c=c||' ';var s=String(this);while(s.length<n)s=c+s;return s}}
+        if(!Array.prototype.find){Array.prototype.find=function(fn){for(var i=0;i<this.length;i++){if(fn(this[i],i,this))return this[i]}}}
+        if(!Array.prototype.findIndex){Array.prototype.findIndex=function(fn){for(var i=0;i<this.length;i++){if(fn(this[i],i,this))return i}return-1}}
+        if(!Array.prototype.includes){Array.prototype.includes=function(v){return this.indexOf(v)!==-1}}
+        if(!Array.from){Array.from=function(a){return Array.prototype.slice.call(a)}}
+        if(!Object.entries){Object.entries=function(o){return Object.keys(o).map(function(k){return[k,o[k]]})}}
+        if(!Object.values){Object.values=function(o){return Object.keys(o).map(function(k){return o[k]})}}
+        if(!Object.assign){Object.assign=function(t){for(var i=1;i<arguments.length;i++){var s=arguments[i];if(s)for(var k in s)if(Object.prototype.hasOwnProperty.call(s,k))t[k]=s[k]}return t}}
+        if(!window.CustomEvent){window.CustomEvent=function(e,p){p=p||{};var evt=document.createEvent('CustomEvent');evt.initCustomEvent(e,!!p.bubbles,!!p.cancelable,p.detail);return evt}}
+        if(!navigator.clipboard){navigator.clipboard={writeText:function(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.left='-9999px';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(a);return Promise.resolve()}}}
+        if(!window.Promise){document.write('<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>')}
+        if(!window.fetch){document.write('<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3/dist/fetch.umd.js"><\/script>')}
+      }catch(e){}
+    </script>
+    <noscript>
+      <div style="background:#000;color:#fff;text-align:center;padding:40px;font-family:sans-serif">
+        <h1>☠️ BLACK MART</h1>
+        <p>يرجى تفعيل JavaScript لاستخدام الموقع</p>
+        <p>Please enable JavaScript to use this site</p>
+      </div>
+    </noscript>
+  </body>
+</html>
